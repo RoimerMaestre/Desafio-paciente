@@ -24,7 +24,7 @@
         </div>
         <div>
           <label for="motivo" :class="{ vacio: !paciente.motivo }">Motivo:</label>
-          <textarea v-model="paciente.motivo" id="motivo" :class="{ vacio: !paciente.motivo }"></textarea>
+          <textarea  v-model="paciente.motivo" id="motivo" :class="{ vacio: !paciente.motivo }"></textarea>
         </div>
         <button :disabled="!formularioValido"  type="submit" class="submit-button">Agregar</button>
       </form>

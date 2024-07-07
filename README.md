@@ -1,5 +1,5 @@
-# desafio-pasciente
-
+# Desafio Manejo de Eventos
+![alt](./public/Captura%20de%20pantalla%202024-07-07%20154256.png)
 ## Project setup
 ```
 npm install
