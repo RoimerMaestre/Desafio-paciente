@@ -39,7 +39,7 @@ Este componente proporciona un formulario para que los usuarios ingresen los dat
 
 ## Dudas
 <ul>
-<li>En las cards, especialmente donde salen el motivo, no supe que estilos darles, porque si limitaba el widh se va para abajo y si no para los ados, honestamente lo deje asi porque no supe como resolver esto</li>
+<li>En las cards, especialmente donde salen el motivo, no supe que estilos darles, porque si limitaba el widh se va para abajo y si no para los lados, honestamente lo deje asi porque no supe como resolver esto</li>
 
 </ul>
 
