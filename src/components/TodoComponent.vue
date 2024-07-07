@@ -1,14 +1,17 @@
 <template>
-    <section :class="gravedadClass">
+    <section class="todo-item" :class="gravedadClass">
       <h1>Paciente</h1>
       <p>{{ paciente.Nombre }}</p>
-      <h1>Fecha</h1>
+      <h2>Fecha</h2>
       <p>{{ paciente.fecha }}</p>
-      <h1>Hora</h1>
+      <h2>Hora</h2>
       <p>{{ paciente.hora }}</p>
-      <h1>Gravedad</h1>
+      <h2>Gravedad</h2>
       <p>{{ paciente.gravedad }}</p>
+      <h2>Motivo</h2>
+      <p>{{ paciente.motivo }}</p>
       <button @click="eliminarPaciente">Eliminar</button>
+      
     </section>
   </template>
   
@@ -38,10 +41,10 @@
   
   <style scoped>
   .todo-item {
-    flex: 1 0 30%; /* Ajusta el tamaño de las columnas según sea necesario */
+    text-align: center;
     margin: 10px;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #727171;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }

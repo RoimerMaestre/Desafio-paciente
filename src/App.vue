@@ -2,6 +2,9 @@
   <div>
     <FormularioCitas @formulario-enviado="agregarPaciente" />
     <section id="todo-container">
+      <div v-if="pacientes.length === 0">
+        <p>Aún no hay consultas registradas</p>
+      </div>
       <div :key="index" v-for="(paciente, index) in pacientes">
         <TodoComponent
           :index="index"
@@ -10,6 +13,7 @@
         />
       </div>
     </section>
+   
   </div>
 </template>
 
@@ -17,17 +21,20 @@
 import FormularioCitas from './components/FormularioCitas.vue'
 import TodoComponent from './components/TodoComponent.vue'
 
+
 export default {
   name: 'App',
   components: {
     FormularioCitas,
-    TodoComponent
+    TodoComponent,
+  
   },
   data() {
     return {
       pacientes: []
     };
   },
+  
   methods: {
     agregarPaciente(nuevoPaciente) {
       this.pacientes.push(nuevoPaciente);
@@ -40,29 +47,30 @@ export default {
 </script>
 
 <style>
-#app {
+/* #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
+} */
+
 
 #todo-container {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.todo-item {
-  flex: 1 0 30%; /* Ajusta el tamaño de las columnas según sea necesario */
+  gap: 10px;
+} 
+/* .todo-item {
+  flex: 1 0 30%; 
   margin: 10px;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* Clases para los estados de gravedad */
 .leve {
