@@ -13,28 +13,25 @@
         />
       </div>
     </section>
-   
   </div>
 </template>
 
 <script>
-import FormularioCitas from './components/FormularioCitas.vue'
-import TodoComponent from './components/TodoComponent.vue'
-
+import FormularioCitas from "./components/FormularioCitas.vue";
+import TodoComponent from "./components/TodoComponent.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     FormularioCitas,
     TodoComponent,
-  
   },
   data() {
     return {
-      pacientes: []
+      pacientes: [],
     };
   },
-  
+
   methods: {
     agregarPaciente(nuevoPaciente) {
       this.pacientes.push(nuevoPaciente);
@@ -42,20 +39,17 @@ export default {
     eliminarPaciente(index) {
       this.pacientes.splice(index, 1);
     },
-  }
-}
+  },
+};
 </script>
 
 <style>
-
-
-
 #todo-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-} 
+}
 
 .leve {
   background-color: green;
